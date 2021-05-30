@@ -1,6 +1,6 @@
 {
-  "name": "musictop20-api",
-  "version": "1.0.0",
+  "name": "themusictop20-api",
+  "version": "1.2.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/DotwoodMedia/musictop20-api.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Dotwood Media",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DotwoodMedia/musictop20-api/issues"
