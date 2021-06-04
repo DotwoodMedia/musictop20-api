@@ -42,4 +42,11 @@ async function getNominations() {
     return data;
 }
 
-module.exports = { getStats, getNominations, getStatsUsers, getStatsNominations, getStatsVotes, getStatsViews };
+async function getEdition1() {
+    const result = await fetch('https://api.dotwood.media/musictop20/edition1');
+
+    const data = await result.json();
+    return data;
+}
+
+module.exports = { getStats, getNominations, getStatsUsers, getStatsNominations, getStatsVotes, getStatsViews, getEdition1 };

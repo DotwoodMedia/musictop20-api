@@ -61,5 +61,18 @@ for (let i = 0; i < data.response.length; i++) {
 console.log(list);
 ```
 
+## getEdition1()
+View the results of edition 1
+```
+var data = await musictop20.getEdition1();
+
+let list = "";
+for (let i = 0; i < data.response.length; i++) {
+    list += `https://open.spotify.com/embed/track/${data.response[i].songid} \n`;
+}
+        
+console.log(list);
+```
+
 # 📑 License
 This project has an <a href="https://github.com/DotwoodMedia/musictop20-api/blob/main/LICENSE">Apache 2.0</a> license
