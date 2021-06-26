@@ -74,5 +74,12 @@ for (let i = 0; i < data.response.length; i++) {
 console.log(list);
 ```
 
+## register()
+View the results of edition 1
+```
+var data = await musictop20.register(username, email, password);
+console.log(`Verify yourself on: https://music.dotwood.media/verify with the code: ${data.response}`)
+```
+
 # 📑 License
 This project has an <a href="https://github.com/DotwoodMedia/musictop20-api/blob/main/LICENSE">Apache 2.0</a> license
