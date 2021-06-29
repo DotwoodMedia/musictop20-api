@@ -49,14 +49,23 @@ async function getEdition1() {
     return data;
 }
 
-async function register(username, email, pwd) {
+async function register(api, username, email, pwd) {
+    if (!api) return console.log("Please enter a api key!");
     if (!username) return console.log("Please give a username!");
     if (!email) return console.log("Please give a email!");
     if (!pwd) return console.log("Please give a password!");
-    const result = await fetch(`https://api.dotwood.media/musictop20/register?username=${username}&email=${email}&pwd=${pwd}`);
+    const result = await fetch(`https://api.dotwood.media/musictop20/register?key=${api}?username=${username}&email=${email}&pwd=${pwd}`);
 
     const data = await result.json();
     return data;
 }
 
-module.exports = { getStats, getNominations, getStatsUsers, getStatsNominations, getStatsVotes, getStatsViews, getEdition1, register };
+async function mynominations(api) {
+    if (!api) return console.log("Please enter a api key!");
+    const result = await fetch(`https://api.dotwood.media/musictop20/mynominations?key=${api}`);
+
+    const data = await result.json();
+    return data;
+}
+
+module.exports = { getStats, getNominations, getStatsUsers, getStatsNominations, getStatsVotes, getStatsViews, getEdition1, register, mynominations };

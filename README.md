@@ -1,10 +1,10 @@
 # Musictop20-API
 Show the statistics on your own site/bot with this handy package!
 
-<a href="https://www.npmjs.com/package/themusictop20-api"><img src="https://img.shields.io/npm/v/themusictop20-api.svg?maxAge=3600" alt="NPM version" /></a>
-<a href="https://www.npmjs.com/package/themusictop20-api"><img src="https://img.shields.io/npm/dt/themusictop20-api.svg?maxAge=3600" alt="NPM downloads" /></a>
+[![downloadsBadge](https://img.shields.io/npm/dt/themusictop20-api?style=for-the-badge)](https://npmjs.com/themusictop20-api)
+[![versionBadge](https://img.shields.io/npm/v/themusictop20-api?style=for-the-badge)](https://npmjs.com/themusictop20-api)
 
-#💻 Installation
+# 💻 Installation
 
 1. Install module: `npm install themusictop20-api`
 2. Load the module
@@ -75,10 +75,17 @@ console.log(list);
 ```
 
 ## register()
-View the results of edition 1
+Create a new account
 ```
-var data = await musictop20.register(username, email, password);
+var data = await musictop20.register(key, username, email, password);
 console.log(`Verify yourself on: https://music.dotwood.media/verify with the code: ${data.response}`)
+```
+
+## mynominations()
+Show your nominations
+```
+var data = await musictop20.mynominations(key);
+console.log(data)
 ```
 
 # 📑 License
