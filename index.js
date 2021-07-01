@@ -96,7 +96,7 @@ async function register(api, username, email, pwd) {
     if (!username) throw new Error(`Please give a username!`)
     if (!email) throw new Error(`Please give a email!`)
     if (!pwd) throw new Error(`Please give a password!`)
-    const result = await fetch(`https://api.dotwood.media/musictop20/register?key=${api}?username=${username}&email=${email}&pwd=${pwd}`);
+    const result = await fetch(`https://api.dotwood.media/musictop20/register?key=${api}&username=${username}&email=${email}&pwd=${pwd}`);
 
     const data = await result.json();
 
